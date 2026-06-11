@@ -1,0 +1,59 @@
+<div class ="container">
+    <div><h2>Registro de Dispositivos</h2>
+    </div>
+        <div>
+        <form [formGroup]="form" (submit)="aceptar()">
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Dispositivo</mat-label>
+                <input matInput placeholder="Controller" formControlName = "nombre"/>
+                <mat-error>
+
+                @if (form.get('nombre')?.hasError('required')) {
+                Ingrese nombre del dispositivo
+                }
+                </mat-error>
+
+
+            </mat-form-field>
+            <br/>
+            <mat-form-field class="example-full-width">
+                <mat-label>Tipo</mat-label>
+                <input matInput placeholder="Digital"  formControlName = "tipo"/>
+            </mat-form-field>
+            <br/>
+            <mat-form-field>
+                <mat-label>Fecha de Registro</mat-label>
+                <input matInput [matDatepicker]="picker"  formControlName = "fecharegistro">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br/>
+             <mat-form-field>
+
+     <mat-label>Estado</mat-label>
+     <mat-select formControlName="estado">
+      @for (food of estado; track food) {
+       <mat-option [value]="food.value">{{ food.viewValue }}
+
+       </mat-option>
+      }
+
+     </mat-select>
+    </mat-form-field>
+
+    <br/>
+
+     <mat-form-field>
+     <mat-label>Descripcion</mat-label>
+     <textarea matInput formControlName="descripcion"></textarea>
+    </mat-form-field>
+
+    <div>
+      <button matButton>Registrar</button> 
+    </div>
+
+        </form>
+    </div>
+</div>
