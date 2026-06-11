@@ -1,0 +1,96 @@
+<div class="container">
+    <mat-toolbar class="custom-toolbar">
+        
+        <button 
+            mat-button 
+            class="btn-rojo" >
+            <mat-icon fontIcon="home"></mat-icon> 
+        </button>
+
+        <button 
+            mat-button 
+            class="btn-rojo" 
+            [matMenuTriggerFor]="menuIoT">
+            <mat-icon fontIcon="router"></mat-icon> Dispositivos IoT
+        </button>
+
+        <button 
+            mat-button 
+            class="btn-rojo" 
+            [matMenuTriggerFor]="menuEvaluacionPrincipal">
+            <mat-icon fontIcon="assignment"></mat-icon> Evaluaciones
+        </button>
+
+    </mat-toolbar>
+
+    <!-- <mat-menu #menuAutor="matMenu">
+        <button mat-menu-item routerLink="/autores/insertar">
+            <mat-icon>add</mat-icon> Registrar
+        </button>
+        <button mat-menu-item routerLink="/autores/listar">
+            <mat-icon>list</mat-icon> Listar
+        </button>
+    </mat-menu> -->
+
+
+    <mat-menu #menuIoT="matMenu">
+        <button mat-menu-item routerLink="/iotdevices/insertar">
+            <mat-icon>add</mat-icon> Registrar Dispositivo
+        </button>
+        <button mat-menu-item routerLink="/iotdevices/listar">
+            <mat-icon>list</mat-icon> Listar Dispositivos
+        </button>
+        
+        <mat-divider></mat-divider> <button mat-menu-item [matMenuTriggerFor]="subMenuSensores">
+            <mat-icon>sensors</mat-icon> Sensores
+        </button>
+        
+        <button mat-menu-item [matMenuTriggerFor]="subMenuSensorData">
+            <mat-icon>assessment</mat-icon> Datos de Sensores
+        </button>
+    </mat-menu>
+
+    <mat-menu #subMenuSensores="matMenu">
+        <button mat-menu-item routerLink="/sensores/insertar">
+            <mat-icon>add</mat-icon> Registrar Sensor
+        </button>
+        <button mat-menu-item routerLink="/sensores/listar">
+            <mat-icon>list</mat-icon> Listar Sensores
+        </button>
+    </mat-menu>
+
+    <mat-menu #subMenuSensorData="matMenu">
+        <button mat-menu-item routerLink="/sensordata/insertar">
+            <mat-icon>add</mat-icon> Registrar Datos
+        </button>
+        <button mat-menu-item routerLink="/sensordata/listar">
+            <mat-icon>history</mat-icon> Listar Datos
+        </button>
+    </mat-menu>
+
+
+    <mat-menu #menuEvaluacionPrincipal="matMenu">
+        <button mat-menu-item routerLink="/evaluaciones/insertar">
+            <mat-icon>note_add</mat-icon> Registrar Evaluación
+        </button>
+        <button mat-menu-item routerLink="/evaluaciones/listar">
+            <mat-icon>format_list_bulleted</mat-icon> Lista de Evaluaciones
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-menu-item [matMenuTriggerFor]="subMenuResultadosEval">
+            <mat-icon>fact_check</mat-icon> Resultados de Evaluación
+        </button>
+    </mat-menu>
+
+    <mat-menu #subMenuResultadosEval="matMenu">
+        <button mat-menu-item routerLink="/resultados-evaluacion/insertar">
+            <mat-icon>add</mat-icon> Registrar Resultado
+        </button>
+        <button mat-menu-item routerLink="/resultados-evaluacion/listar">
+            <mat-icon>analytics</mat-icon> Listar Resultados
+        </button>
+    </mat-menu>
+
+</div>
