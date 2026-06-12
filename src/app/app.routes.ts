@@ -15,6 +15,9 @@ import { Sensorcomponent } from './components/sensorcomponent/sensorcomponent';
 import { Sensordatacomponent } from './components/sensordatacomponent/sensordatacomponent';
 import { Evaluacioncomponent } from './components/evaluacioncomponent/evaluacioncomponent';
 import { Resultadoevaluacioncomponent } from './components/resultadoevaluacioncomponent/resultadoevaluacioncomponent';
+import { Usercomponent } from './components/usercomponent/usercomponent';
+import { UserListar } from './components/usercomponent/user-listar/user-listar';
+import { UserInsertar } from './components/usercomponent/user-insertar/user-insertar';
 
 export const routes: Routes = [
     {
@@ -70,5 +73,13 @@ export const routes: Routes = [
             {   path:'insertar',  component:ResultadoevaluacionInsertar  }
         ]
     }, 
-    
+
+    //RUTA PARA USERS
+    { path: 'usuarios', component: Usercomponent, 
+        children:[
+            {   path:'listar',  component: UserListar},
+            {   path:'insertar',  component:UserInsertar }
+        ]
+    }
+
 ];

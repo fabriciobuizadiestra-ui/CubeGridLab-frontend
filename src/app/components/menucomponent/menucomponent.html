@@ -21,6 +21,13 @@
             <mat-icon fontIcon="assignment"></mat-icon> Evaluaciones
         </button>
 
+        <button 
+            mat-button 
+            class="btn-rojo" 
+            [matMenuTriggerFor]="menuUsuarios">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
+            Usuarios
+        </button>
     </mat-toolbar>
 
     <!-- <mat-menu #menuAutor="matMenu">
@@ -93,4 +100,9 @@
         </button>
     </mat-menu>
 
+    <mat-menu #menuUsuarios="matMenu">
+    <button mat-menu-item routerLink="/usuarios/nuevo"><mat-icon>add</mat-icon>Registrar</button>
+
+    <button mat-menu-item routerLink="/usuarios/listar"><mat-icon>list</mat-icon>Listar</button>
+  </mat-menu>
 </div>
