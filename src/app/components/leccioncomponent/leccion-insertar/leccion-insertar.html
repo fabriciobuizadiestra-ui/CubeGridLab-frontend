@@ -1,0 +1,54 @@
+<div class="container">
+  <div>
+    <h2>Registro de Lecciones</h2>
+  </div>
+
+  <div>
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Titulo</mat-label>
+        <input matInput placeholder="Introduccion a IoT" formControlName="titulo" />
+        <mat-error>
+          @if (form.get('titulo')?.hasError('required')) {
+            Ingrese el titulo de la leccion
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Contenido</mat-label>
+        <textarea matInput formControlName="contenido"></textarea>
+        <mat-error>
+          @if (form.get('contenido')?.hasError('required')) {
+            Ingrese el contenido de la leccion
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Modulo</mat-label>
+        <mat-select formControlName="modulo">
+          @for (modulo of modulos; track modulo.idModulo) {
+            <mat-option [value]="modulo">
+              {{ modulo.nombre }}
+            </mat-option>
+          }
+        </mat-select>
+        <mat-error>
+          @if (form.get('modulo')?.hasError('required')) {
+            Seleccione un modulo
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <button mat-button>Registrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
