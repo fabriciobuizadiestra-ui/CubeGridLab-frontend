@@ -1,0 +1,53 @@
+<div class="container">
+  <div>
+    <h2>Registro de Cursos</h2>
+  </div>
+
+  <div>
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Curso de robotica" formControlName="nombre" />
+        <mat-error>
+          @if (form.get('nombre')?.hasError('required')) {
+            Ingrese el nombre del curso
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripcion</mat-label>
+        <textarea matInput formControlName="descripcion"></textarea>
+        <mat-error>
+          @if (form.get('descripcion')?.hasError('required')) {
+            Ingrese la descripcion del curso
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Docente</mat-label>
+        <mat-select formControlName="docente">
+          @for (docente of docentes; track docente.idUser) {
+            <mat-option [value]="docente">
+              {{ docente.nameUser }} {{ docente.lastNameUser }}
+            </mat-option>
+          }
+        </mat-select>
+        <mat-error>
+          @if (form.get('docente')?.hasError('required')) {
+            Seleccione un docente
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <button mat-button>Registrar</button>
+      </div>
+    </form>
+  </div>
+</div>
