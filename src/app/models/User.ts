@@ -7,4 +7,5 @@ export class User
     passwordUser:string = "";
     registerDateUser: Date = new Date();
     statusUser: Boolean = false;
+    roleUser: string = "";
 }   
