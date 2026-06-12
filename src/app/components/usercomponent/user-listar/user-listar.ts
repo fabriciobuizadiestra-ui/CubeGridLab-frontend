@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class UserListar implements OnInit{
   dataSource: MatTableDataSource<User> = new MatTableDataSource();
-  displayedColumns: string[] = ['c1', 'c2', 'c3'];
+  displayedColumns: string[] = ['c1', 'c2', 'c3', 'c4'];
   constructor(private uS: Userservice) {}
   ngOnInit(): void {
     this.cargarUsuarios();
