@@ -3,6 +3,7 @@ export class IoTDevice{
     name:string=''
     type:string=''
     registrationDate:Date=new Date()
+    idUser: number = 0;
     status:number=0
     description:string=''
 }
