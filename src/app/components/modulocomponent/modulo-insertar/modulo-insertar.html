@@ -1,0 +1,42 @@
+<div class="container">
+  <div>
+    <h2>Registro de Modulos</h2>
+  </div>
+
+  <div>
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Modulo de IoT" formControlName="nombre" />
+        <mat-error>
+          @if (form.get('nombre')?.hasError('required')) {
+            Ingrese el nombre del modulo
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field>
+        <mat-label>Curso</mat-label>
+        <mat-select formControlName="curso">
+          @for (curso of cursos; track curso.idCurso) {
+            <mat-option [value]="curso">
+              {{ curso.nombre }}
+            </mat-option>
+          }
+        </mat-select>
+        <mat-error>
+          @if (form.get('curso')?.hasError('required')) {
+            Seleccione un curso
+          }
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <button mat-button>Registrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+

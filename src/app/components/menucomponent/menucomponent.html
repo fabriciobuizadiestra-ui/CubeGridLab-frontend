@@ -21,6 +21,27 @@
             <mat-icon fontIcon="assignment"></mat-icon> Evaluaciones
         </button>
 
+        <button
+            mat-button
+            class="btn-rojo"
+            [matMenuTriggerFor]="menuCursos">
+            <mat-icon fontIcon="school"></mat-icon> Cursos
+        </button>
+
+        <button
+            mat-button
+            class="btn-rojo"
+            [matMenuTriggerFor]="menuModulos">
+            <mat-icon fontIcon="layers"></mat-icon> Modulos
+        </button>
+
+        <button
+            mat-button
+            class="btn-rojo"
+            [matMenuTriggerFor]="menuLecciones">
+            <mat-icon fontIcon="book"></mat-icon> Lecciones
+        </button>
+
         <button 
             mat-button 
             class="btn-rojo" 
@@ -100,9 +121,37 @@
         </button>
     </mat-menu>
 
+    <mat-menu #menuCursos="matMenu">
+        <button mat-menu-item routerLink="/cursos/insertar">
+            <mat-icon>add</mat-icon> Registrar Curso
+        </button>
+        <button mat-menu-item routerLink="/cursos/listar">
+            <mat-icon>list</mat-icon> Listar Cursos
+        </button>
+    </mat-menu>
+
+    <mat-menu #menuModulos="matMenu">
+        <button mat-menu-item routerLink="/modulos/insertar">
+            <mat-icon>add</mat-icon> Registrar Modulo
+        </button>
+        <button mat-menu-item routerLink="/modulos/listar">
+            <mat-icon>list</mat-icon> Listar Modulos
+        </button>
+    </mat-menu>
+
+    <mat-menu #menuLecciones="matMenu">
+        <button mat-menu-item routerLink="/lecciones/insertar">
+            <mat-icon>add</mat-icon> Registrar Leccion
+        </button>
+        <button mat-menu-item routerLink="/lecciones/listar">
+            <mat-icon>list</mat-icon> Listar Lecciones
+        </button>
+    </mat-menu>
+
     <mat-menu #menuUsuarios="matMenu">
     <button mat-menu-item routerLink="/usuarios/insertar"><mat-icon>add</mat-icon>Registrar</button>
 
     <button mat-menu-item routerLink="/usuarios/listar"><mat-icon>list</mat-icon>Listar</button>
   </mat-menu>
 </div>
+

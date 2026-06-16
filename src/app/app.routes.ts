@@ -18,6 +18,15 @@ import { Resultadoevaluacioncomponent } from './components/resultadoevaluacionco
 import { Usercomponent } from './components/usercomponent/usercomponent';
 import { UserListar } from './components/usercomponent/user-listar/user-listar';
 import { UserInsertar } from './components/usercomponent/user-insertar/user-insertar';
+import { Cursoscomponent } from './components/cursoscomponent/cursoscomponent';
+import { CursosListar } from './components/cursoscomponent/cursos-listar/cursos-listar';
+import { CursosInsertar } from './components/cursoscomponent/cursos-insertar/cursos-insertar';
+import { Leccioncomponent } from './components/leccioncomponent/leccioncomponent';
+import { LeccionListar } from './components/leccioncomponent/leccion-listar/leccion-listar';
+import { LeccionInsertar } from './components/leccioncomponent/leccion-insertar/leccion-insertar';
+import { Modulocomponent } from './components/modulocomponent/modulocomponent';
+import { ModuloListar } from './components/modulocomponent/modulo-listar/modulo-listar';
+import { ModuloInsertar } from './components/modulocomponent/modulo-insertar/modulo-insertar';
 
 export const routes: Routes = [
     {
@@ -79,6 +88,30 @@ export const routes: Routes = [
         children:[
             {   path:'listar',  component: UserListar},
             {   path:'insertar',  component:UserInsertar }
+        ]
+    },
+
+    // --- RUTAS PARA CURSOS ---
+    { path: 'cursos', component: Cursoscomponent,
+        children:[
+            {   path:'listar',  component:CursosListar  },
+            {   path:'insertar',  component:CursosInsertar  }
+        ]
+    },
+
+    // --- RUTAS PARA LECCIONES ---
+    { path: 'lecciones', component: Leccioncomponent,
+        children:[
+            {   path:'listar',  component:LeccionListar  },
+            {   path:'insertar',  component:LeccionInsertar  }
+        ]
+    },
+
+    // --- RUTAS PARA MODULOS ---
+    { path: 'modulos', component: Modulocomponent,
+        children:[
+            {   path:'listar',  component:ModuloListar  },
+            {   path:'insertar',  component:ModuloInsertar  }
         ]
     }
 
