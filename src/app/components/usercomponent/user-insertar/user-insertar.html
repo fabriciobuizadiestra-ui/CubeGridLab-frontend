@@ -1,1 +1,37 @@
-<p>user-insertar works!</p>
+<div class="container">
+  <div style="text-align: center; margin: 3%">
+    <h2>Registro de Usuarios</h2>
+    <div style="text-align: center">
+      <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Mario" formControlName="nombre" />
+          <mat-error>
+            @if (form.get('nombre')?.hasError('required')) {
+              Ingrese nombre de usuario!!
+            }
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+          <mat-label>Apellidos</mat-label>
+          <input matInput placeholder="Rodriguez" formControlName="apellidos" />
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="mario.rodriguez@example.com" formControlName="email" />
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput placeholder="********" type="password" formControlName="contrasena" />
+        </mat-form-field>
+        <br />
+        
+        <button matButton>Registrar</button>
+        
+      </form>
+    </div>
+  </div>
+</div>
