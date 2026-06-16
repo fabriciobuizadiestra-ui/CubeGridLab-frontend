@@ -27,92 +27,107 @@ import { LeccionInsertar } from './components/leccioncomponent/leccion-insertar/
 import { Modulocomponent } from './components/modulocomponent/modulocomponent';
 import { ModuloListar } from './components/modulocomponent/modulo-listar/modulo-listar';
 import { ModuloInsertar } from './components/modulocomponent/modulo-insertar/modulo-insertar';
+import { UserActualizar } from './components/usercomponent/user-actualizar/user-actualizar';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'homes',
-        pathMatch: 'full'
-    },
-    {
-        path: 'homes',
-        component: Homecomponent
-    },
-    
-    // --- RUTAS PARA IOTDEVICE ---
-    { path: 'iotdevices', component: Iotdevicecomponent, 
-        children:[
-            {   path:'listar',  component:IotdeviceListar  },
-            {   path:'insertar',  component:IotdeviceInsertar  }
-        ]
-    },
-    
-    
-    // --- RUTAS PARA SENSOR ---
-    { path: 'sensores', component: Sensorcomponent, 
-        children:[
-            {   path:'listar',  component:SensorListar  },
-            {   path:'insertar',  component:SensorInsertar  }
-        ]
-    },
+  {
+    path: '',
+    redirectTo: 'homes',
+    pathMatch: 'full',
+  },
+  {
+    path: 'homes',
+    component: Homecomponent,
+  },
 
+  // --- RUTAS PARA IOTDEVICE ---
+  {
+    path: 'iotdevices',
+    component: Iotdevicecomponent,
+    children: [
+      { path: 'listar', component: IotdeviceListar },
+      { path: 'insertar', component: IotdeviceInsertar },
+    ],
+  },
 
-    // --- RUTAS PARA SENSOR DATA ---
-    { path: 'sensordata', component: Sensordatacomponent, 
-        children:[
-            {   path:'listar',  component:SensordataListar  },
-            {   path:'insertar',  component:SensordataInsertar  }
-        ]
-    }, 
+  // --- RUTAS PARA SENSOR ---
+  {
+    path: 'sensores',
+    component: Sensorcomponent,
+    children: [
+      { path: 'listar', component: SensorListar },
+      { path: 'insertar', component: SensorInsertar },
+    ],
+  },
 
+  // --- RUTAS PARA SENSOR DATA ---
+  {
+    path: 'sensordata',
+    component: Sensordatacomponent,
+    children: [
+      { path: 'listar', component: SensordataListar },
+      { path: 'insertar', component: SensordataInsertar },
+    ],
+  },
 
-    // --- RUTAS PARA EVALUACION ---
-    { path: 'evaluaciones', component: Evaluacioncomponent, 
-        children:[
-            {   path:'listar',  component:EvaluacionListar  },
-            {   path:'insertar',  component:EvaluacionInsertar  }
-        ]
-    }, 
+  // --- RUTAS PARA EVALUACION ---
+  {
+    path: 'evaluaciones',
+    component: Evaluacioncomponent,
+    children: [
+      { path: 'listar', component: EvaluacionListar },
+      { path: 'insertar', component: EvaluacionInsertar },
+    ],
+  },
 
+  // --- RUTAS PARA RESULTADO EVALUACION ---
+  {
+    path: 'resultados-evaluacion',
+    component: Resultadoevaluacioncomponent,
+    children: [
+      { path: 'listar', component: ResultadoevaluacionListar },
+      { path: 'insertar', component: ResultadoevaluacionInsertar },
+    ],
+  },
 
-    // --- RUTAS PARA RESULTADO EVALUACION ---
-    { path: 'resultados-evaluacion', component: Resultadoevaluacioncomponent , 
-        children:[
-            {   path:'listar',  component:ResultadoevaluacionListar  },
-            {   path:'insertar',  component:ResultadoevaluacionInsertar  }
-        ]
-    }, 
+  //RUTA PARA USERS
+  {
+    path: 'usuarios',
+    component: Usercomponent,
+    children: [
+      { path: 'listar', component: UserListar },
+      { path: 'insertar', component: UserInsertar },
+      { path: 'edits/:id', component: UserActualizar },
+    ],
+  },
 
-    //RUTA PARA USERS
-    { path: 'usuarios', component: Usercomponent, 
-        children:[
-            {   path:'listar',  component: UserListar},
-            {   path:'insertar',  component:UserInsertar }
-        ]
-    },
+  // --- RUTAS PARA CURSOS ---
+  {
+    path: 'cursos',
+    component: Cursoscomponent,
+    children: [
+      { path: 'listar', component: CursosListar },
+      { path: 'insertar', component: CursosInsertar },
+    ],
+  },
 
-    // --- RUTAS PARA CURSOS ---
-    { path: 'cursos', component: Cursoscomponent,
-        children:[
-            {   path:'listar',  component:CursosListar  },
-            {   path:'insertar',  component:CursosInsertar  }
-        ]
-    },
+  // --- RUTAS PARA LECCIONES ---
+  {
+    path: 'lecciones',
+    component: Leccioncomponent,
+    children: [
+      { path: 'listar', component: LeccionListar },
+      { path: 'insertar', component: LeccionInsertar },
+    ],
+  },
 
-    // --- RUTAS PARA LECCIONES ---
-    { path: 'lecciones', component: Leccioncomponent,
-        children:[
-            {   path:'listar',  component:LeccionListar  },
-            {   path:'insertar',  component:LeccionInsertar  }
-        ]
-    },
-
-    // --- RUTAS PARA MODULOS ---
-    { path: 'modulos', component: Modulocomponent,
-        children:[
-            {   path:'listar',  component:ModuloListar  },
-            {   path:'insertar',  component:ModuloInsertar  }
-        ]
-    }
-
+  // --- RUTAS PARA MODULOS ---
+  {
+    path: 'modulos',
+    component: Modulocomponent,
+    children: [
+      { path: 'listar', component: ModuloListar },
+      { path: 'insertar', component: ModuloInsertar },
+    ],
+  },
 ];
