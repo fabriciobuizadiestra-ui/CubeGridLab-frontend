@@ -1,8 +1,8 @@
-export class User
+export class UserUpdate
 {
     idUser: number = 0;
     nameUser: string = ""; 
     lastNameUser: string ="";  
     emailUser: string = "";  
-    roleUser: string = "";
+    passwordUser:string = "";
 }   
