@@ -5,7 +5,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { User } from '../../../models/User';
+import { UserInsert } from '../../../models/UserInsert';
 import { Userservice } from '../../../services/userservice';
 import { Router } from '@angular/router';
 
@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
 })
 export class UserInsertar {
   form:FormGroup= new FormGroup({})
-  us:User = new User();
+  us:UserInsert = new UserInsert();
   constructor(
     private uS:Userservice,
     private router:Router,
