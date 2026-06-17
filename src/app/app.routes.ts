@@ -130,4 +130,10 @@ export const routes: Routes = [
       { path: 'insertar', component: ModuloInsertar },
     ],
   },
+  {
+   path: 'vr-test',
+   loadComponent: () =>
+      import('./components/vr-test/vr-test')
+      .then(m => m.VrTestComponent)
+  }
 ];
