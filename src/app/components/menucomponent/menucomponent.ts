@@ -11,6 +11,6 @@ import { RouterLink } from '@angular/router';
   imports: [MatToolbarModule,MatButtonModule,
             MatIconModule,MatMenuModule,RouterLink, MatDividerModule],
   templateUrl: './menucomponent.html',
-  styleUrl: './menucomponent.css',
+  styleUrls: ['./menucomponent.css'],
 })
 export class Menucomponent {}

@@ -1,3 +1,163 @@
-<div class="container">
-    <p>CubeGridLab Página Principal</p>
-</div>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class='logo' href='/'>
+                    <h1 class="logo__bold no-margin centrar-texto">CUBEGRID<span>LAB</span></h1>
+                </a>
+                <!--menú hamburguesa-->
+                <div class="menu mobile-menu" #mobileMenu>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <nav class="navegacion" #navegacion>
+                    <a href="#" class="navegacion__enlace">Inicio</a>
+                    <a class='navegacion__enlace' href='/nosotros'>Nosotros</a>
+                    <a class='navegacion__enlace' href='/nuestrosproyectos'>Nuestros Proyectos</a>
+                    <a class='navegacion__enlace' href='/contacto'>Contacto</a>
+                    <a class='navegacion__enlace' href='/login'>Iniciar Sesión</a>
+                </nav>
+            </div>
+        </div>
+        <div class="background">
+            <video autoplay muted loop playsinline>
+                <source src="/images/videoBackground2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="header__texto margin_responsive" #headerTexto>
+            <h1>
+                Innovación espacial en las aulas
+            </h1>
+            <a class='boton boton_inscribete centrar-texto' href='/login'>Empieza Ya!</a> 
+        </div>
+    </header>
+
+    <section class="cursos contenedor" id="cursos">
+        <h1 class="titulo_seccion">Revisa Nuestra Guía Educativa</h1>
+        <div class="contenedor tres-columnas">
+            <div class="tarjeta_curso">
+                <article class="entrada-blog oscurecer">
+                    <img src="/images/curso1.jpg">
+                    <h1>Gestión de proyectos espaciales</h1>
+                </article>
+                <div class="curso_texto">
+                    <p>Aprende a planificar, coordinar y ejecutar proyectos relacionados con la tecnología aeroespacial. Los participantes desarrollarán habilidades en liderazgo, gestión de recursos, trabajo en equipo y toma de decisiones, a tarves de la exploración espacial.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta_curso">
+                <article class="entrada-blog oscurecer">
+                    <img src="/images/curso2.jpg">
+                    <h1>Conceptos básicos de electrónica y pruebas</h1>
+                </article>
+                <div class="curso_texto">
+                    <p>Diseña, construye y programa; crea proyectos electrónicos con microcontroladores, aplicados al ámbito espacial. Los participantes desarrollarán habilidades en circuitos,mientras crean soluciones tecnológicas para nanosatélites y sistemas de comunicación espacial.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta_curso">
+                <article class="entrada-blog">
+                    <img src="/images/curso3.jpg">
+                    <h1>Conceptos básicos de mecánica y fluidos</h1>
+                </article>
+                <div class="curso_texto">
+                    <p>Aprende los fundamentos de la mecánica y los fluidos, explorando cómo las fuerzas y los movimientos afectan a los sistemas. Los participantes desarrollarán habilidades en análisis de fuerzas, dinámica y comportamiento de los fluidos, para situaciones reales en ingeniería y tecnología espacial.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor tres-columnas">
+            <div class="tarjeta_curso">
+                <article class="entrada-blog oscurecer">
+                    <img src="/images/curso4.jpg">
+                    <h1>Sistemas satelitales y complejos</h1>
+                </article>
+                <div class="curso_texto">
+                    <p>Explora los fundamentos de los sistemas satelitales y sus componentes complejos. Los participantes aprenderán sobre la integración de satélites, comunicación en órbita y gestión de datos, desarrollando habilidades clave para diseñar y gestionar sistemas satelitales en el ámbito espacial.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta_curso">
+                <article class="entrada-blog oscurecer">
+                    <img src="/images/curso5.jpg">
+                    <h1>Vehículos de lanzamiento</h1>
+                </article>
+                <div class="curso_texto">
+                    <p>Adéntrate en el estudio de los vehículos de lanzamiento, comprendiendo su diseño, funcionamiento y los procesos detrás del envío de satélites al espacio.Aprende sobre propulsión, aerodinámica y planificación de misiones espaciales, preparate para enfrentar desafíos reales en el campo aeroespacial.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta_curso">
+                <article class="entrada-blog oscurecer">
+                    <img src="/images/curso6.jpg">
+                    <h1>Diseños básicos de estaciones terrestres</h1>
+                </article>
+                <div class="curso_texto">
+                    <p>Aprende a diseñar y construir estaciones terrestres para la comunicación con satélites. Este curso enseña los principios fundamentales de antenas, sistemas de recepción y transmisión, y la infraestructura necesaria para operar una estación de seguimiento espacial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios contenedor">
+        <h1 class="titulo_seccion">Servicios que Transforman</h1>
+        <div class="componente">
+            <img src="/images/componente1.jpg" alt="">
+            <div class="componente_texto">
+                <h4>Arduino</h4>
+                <p>Nuestra plataforma web permite la integración fluida con Arduino, ofreciendo a los estudiantes la posibilidad de diseñar y controlar sus proyectos CubeSat de manera avanzada usando C++. Los interesados pueden incorporar diferentes microcontroladores de Arduino para gestionar modulos de energía, sistemas de comunicación y otras funcionalidades clave, creando soluciones completas para sus misiones espaciales.</p>
+            </div>
+        </div>
+
+        <div class="componente">
+            <div class="componente_texto">
+                <h4>Raspberry pi</h4>
+                <p>Integración con Raspberry Pi, permitiendo a los estudiantes diseñar y controlar sus proyectos CubeSat de forma senscilla con Python. Con su potente capacidad de procesamiento y conectividad, Raspberry Pi se convierte en una herramienta ideal para gestionar sensores, realizar análisis de datos y controlar sistemas de comunicación dentro de los nanosatélites.</p>
+            </div>
+            <img src="/images/componente2.jpg" alt="">
+        </div>
+
+        <div class="componente">
+            <img src="/images/componente3.jpg" alt="">
+            <div class="componente_texto">
+                <h4>ESP32</h4>
+                <p>Con la integración del ESP32 en nuestra plataforma web, los estudiantes pueden incorporar un controlador de bajo consumo y alta eficiencia en sus proyectos CubeSat. Este microcontrolador facilita la conexión inalámbrica, el manejo de sensores y la transmisión de datos, permitiendo soluciones flexibles y escalables envios de información desde el espacio.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="footer">
+        <div class="footer-contenido">
+          <div class="footer-columna">
+            <h4>Nosotros</h4>
+            <nav class="footer-nav">
+              <a href='/nosotros'>¿Quiénes somos?</a>
+              <a href='/nosotros#objetivos'>Objetivos y Metas</a>
+              <a href='/nosotros#directiva'>Directivo</a>
+              <a href='/contacto'>Contacto</a>
+            </nav>
+          </div>
+          
+          <div class="footer-columna footer-centro">
+            <div class="footer-logo">CUBEGRID<span>LAB</span></div>
+            <div class="footer-social">
+              <a href="#" target="_blank"><img src="/images/facebook.png" alt="facebook"></a>
+              <a href="#" target="_blank"><img src="/images/logotipo-de-instagram.png" alt="instagram"></a>
+              <a href="#" target="_blank"><img src="/images/twitter-forma-negra.png" alt="twitter"></a>
+            </div>
+          </div>
+          
+          <div class="footer-columna">
+            <h4>Contáctanos</h4>
+            <nav class="footer-nav">
+              <a href='/contacto#actividades'>Actividades</a>
+              <a href='/contacto#comunidad'>Comunidad</a>
+              <a href='/contacto#noticias'>Noticias</a>
+              <a href="nuestros-proyectos.html">Proyectos</a>
+            </nav>
+          </div>
+        </div>
+    </footer>

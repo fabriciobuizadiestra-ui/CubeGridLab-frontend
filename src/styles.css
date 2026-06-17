@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles: Material theme, fonts and CSS variables used across components */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root{
+	--fuentePrincipal: 'Poppins', sans-serif;
+	--fuenteLogo: 'Pridi', serif;
+	--primario: #0AEFE4;
+	--blanco: #ffffff;
+	--negro: #000000;
+	--claro: #e1e1e1;
+}
+
+html{ box-sizing: border-box; font-size: 62.5%; }
+*, *:before, *:after { box-sizing: inherit; }
+body{
+	font-family: var(--fuentePrincipal);
+	font-size: 1.6rem;
+	line-height: 2;
+}
+
+/* Place any additional global helpers here */
