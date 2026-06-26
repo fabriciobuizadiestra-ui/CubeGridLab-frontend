@@ -14,7 +14,7 @@ import { IotDeviceservice } from '../../../services/iotdeviceservice';
 export class IotdeviceListar implements OnInit{
 
   dataSource: MatTableDataSource<IoTDevice> = new MatTableDataSource()
-  displayedColumns: string[] = ['c1', 'c2', 'c3', 'c4','c5','c6','c7'];
+  displayedColumns: string[] = ['c1', 'c2', 'c3', 'c4','c5','c6', 'c8','c7'];
 
   constructor(private aS: IotDeviceservice) { }
   ngOnInit(): void {
