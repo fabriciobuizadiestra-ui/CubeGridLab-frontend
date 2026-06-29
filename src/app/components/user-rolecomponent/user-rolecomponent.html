@@ -1,0 +1,64 @@
+<div class="container">
+  <h2>Asignación de Roles</h2>
+
+  <form [formGroup]="form" (ngSubmit)="asignar()">
+    <div class="form-row">
+      <mat-form-field class="example-full-width">
+        <mat-label>ID Usuario</mat-label>
+        <input matInput placeholder="1" type="number" formControlName="idUser" />
+        <mat-error>
+          @if (form.get('idUser')?.hasError('required')) {
+            Ingrese ID de usuario!!
+          }
+        </mat-error>
+      </mat-form-field>
+      <br />
+
+      <mat-form-field appearance="outline">
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="idRole">
+          @for (role of roles; track role.idRole) {
+            <mat-option [value]="role.idRole">
+              {{ role.nameRole }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        Asignar
+      </button>
+    </div>
+  </form>
+
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.idUserRole }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let element">{{ element.nameUser }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="rol">
+        <th mat-header-cell *matHeaderCellDef>Rol</th>
+        <td mat-cell *matCellDef="let element">{{ element.nameRole }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="eliminar">
+        <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button color="warn" (click)="eliminar(element.idUserRole)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

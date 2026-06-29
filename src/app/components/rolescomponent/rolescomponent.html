@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Roles</h2>
+   <div style="text-align: center; margin: 3%">
+        
+        <div class="cards">
+        <mat-card *ngFor="let role of roles" class="role-card">
+        <mat-card-title>{{ role.nameRole }}</mat-card-title>
+        <mat-card-content>
+            <p>Cantidad de Usuarios</p>
+            <p class="value">{{ getUserCount(role) }}</p>
+        </mat-card-content>
+        </mat-card>
+        </div>
+   </div>
+    
+  
+</div>

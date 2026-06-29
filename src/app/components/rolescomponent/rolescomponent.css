@@ -1,0 +1,32 @@
+.container {
+  padding: 24px;
+}
+
+.toolbar {
+  margin-bottom: 24px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.role-card {
+  min-height: 140px;
+}
+
+mat-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.value {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 4px;
+}

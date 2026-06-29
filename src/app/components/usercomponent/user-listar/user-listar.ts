@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 })
 export class UserListar implements OnInit{
   dataSource: MatTableDataSource<User> = new MatTableDataSource();
-  displayedColumns: string[] = ['c1', 'c2', 'c3', 'c4','c5'];
+  displayedColumns: string[] = ['c0','c1', 'c2', 'c3', 'c4','c5'];
   constructor(private uS: Userservice) {}
   ngOnInit(): void {
     this.cargarUsuarios();

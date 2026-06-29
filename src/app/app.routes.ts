@@ -18,6 +18,8 @@ import { Resultadoevaluacioncomponent } from './components/resultadoevaluacionco
 import { Usercomponent } from './components/usercomponent/usercomponent';
 import { UserListar } from './components/usercomponent/user-listar/user-listar';
 import { UserInsertar } from './components/usercomponent/user-insertar/user-insertar';
+import { UserRoleComponent } from './components/user-rolecomponent/user-rolecomponent';
+import { RolesComponent } from './components/rolescomponent/rolescomponent';
 import { Cursoscomponent } from './components/cursoscomponent/cursoscomponent';
 import { CursosListar } from './components/cursoscomponent/cursos-listar/cursos-listar';
 import { CursosInsertar } from './components/cursoscomponent/cursos-insertar/cursos-insertar';
@@ -99,6 +101,18 @@ export const routes: Routes = [
       { path: 'insertar', component: UserInsertar },
       { path: 'edits/:id', component: UserActualizar },
     ],
+  },
+
+  // --- RUTAS PARA USER ROLES ---
+  {
+    path: 'user-roles',
+    component: UserRoleComponent,
+  },
+
+  // --- RUTAS PARA ROLES ---
+  {
+    path: 'roles',
+    component: RolesComponent,
   },
 
   // --- RUTAS PARA CURSOS ---
