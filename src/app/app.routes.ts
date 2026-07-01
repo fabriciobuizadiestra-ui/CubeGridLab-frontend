@@ -18,6 +18,8 @@ import { Resultadoevaluacioncomponent } from './components/resultadoevaluacionco
 import { Usercomponent } from './components/usercomponent/usercomponent';
 import { UserListar } from './components/usercomponent/user-listar/user-listar';
 import { UserInsertar } from './components/usercomponent/user-insertar/user-insertar';
+import { UserRoleComponent } from './components/user-rolecomponent/user-rolecomponent';
+import { RolesComponent } from './components/rolescomponent/rolescomponent';
 import { Cursoscomponent } from './components/cursoscomponent/cursoscomponent';
 import { CursosListar } from './components/cursoscomponent/cursos-listar/cursos-listar';
 import { CursosInsertar } from './components/cursoscomponent/cursos-insertar/cursos-insertar';
@@ -28,12 +30,21 @@ import { Modulocomponent } from './components/modulocomponent/modulocomponent';
 import { ModuloListar } from './components/modulocomponent/modulo-listar/modulo-listar';
 import { ModuloInsertar } from './components/modulocomponent/modulo-insertar/modulo-insertar';
 import { UserActualizar } from './components/usercomponent/user-actualizar/user-actualizar';
+import { Authenticate } from './components/authenticate/authenticate';
+import { seguridadGuard } from './guard/seguridad-guard';
 
 export const routes: Routes = [
   {
     path: '',
     redirectTo: 'homes',
     pathMatch: 'full',
+  },
+  {
+    path: 'auth',
+    children: [
+      { path: 'login', component: Authenticate, }
+    ],
+    
   },
   {
     path: 'homes',
@@ -95,10 +106,22 @@ export const routes: Routes = [
     path: 'usuarios',
     component: Usercomponent,
     children: [
-      { path: 'listar', component: UserListar },
+      { path: 'listar', component: UserListar, canActivate: [seguridadGuard] },
       { path: 'insertar', component: UserInsertar },
-      { path: 'edits/:id', component: UserActualizar },
+      { path: 'edits/:id', component: UserActualizar, canActivate: [seguridadGuard], data: { renderMode: 'server' } },
     ],
+  },
+
+  // --- RUTAS PARA USER ROLES ---
+  {
+    path: 'user-roles',
+    component: UserRoleComponent,
+  },
+
+  // --- RUTAS PARA ROLES ---
+  {
+    path: 'roles',
+    component: RolesComponent,
   },
 
   // --- RUTAS PARA CURSOS ---

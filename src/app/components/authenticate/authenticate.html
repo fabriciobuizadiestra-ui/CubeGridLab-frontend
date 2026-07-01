@@ -1,0 +1,23 @@
+<div class="container" style="text-align: center">
+  <div>
+    <img src="assets/logo.png" alt="Logo de la empresa" />
+  </div>
+  <h2>Inicie sesión</h2>
+  <mat-form-field class="example-full-width">
+    <mat-label>Correo</mat-label>
+    <input matInput placeholder="Email" [(ngModel)]="email" />
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="Password" [(ngModel)]="password" />
+  </mat-form-field>
+  <br />
+  <button mat-raised-button (click)="login()">Ingresar</button>
+  <p style="margin-top: 12px;">
+    ¿No tienes cuenta?
+    <a routerLink="/usuarios/insertar">Regístrate</a>
+  </p>
+</div>
+
+
